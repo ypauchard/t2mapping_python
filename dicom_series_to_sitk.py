@@ -1,5 +1,5 @@
 # Author: Yves Pauchard
-# Date: Dec 16, 2017
+# Date: Aug 24, 2018
 # Converting all series in a DICOM folder to sitk images
 
 
