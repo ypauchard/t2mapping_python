@@ -132,10 +132,9 @@ for image_value in image_and_values:
     logger.info("Normalizing image with {}".format(value))
     img /= value
 
-    # Create registered image name
+    # Create normalized image name
     filename = os.path.basename(image_name)
     split_filename = os.path.splitext(filename)  # gets filename and extension
-    #TODO: add '_norm' as a parameter settable through ini file.
     ouput_file_name = split_filename[0] + output_filename_ending + split_filename[1]
 
     # Save registered image
