@@ -162,13 +162,12 @@ for experiment in experiments:
         call_list.append(os.path.join(input_dir, image))
         call_list.append(te)
 
-    logger.info("starting process with: {}".format(call_list))
-
     #check if output_dir exists, create if not.
     if not os.path.exists(output_dir):
         logger.info("Creating output directory {}".format(output_dir))
         os.makedirs(output_dir)
 
+    logger.info("starting process with: {}".format(call_list))
 
     # call t2mapping executable
     subprocess.check_call(call_list)
