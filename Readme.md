@@ -53,3 +53,13 @@ python <path>/t2mapping_python/run_t2mapping.py config/t2map.ini
 17. In MITK-GEM, measure mean T2 value in cartilage mask, record in results csv in results sub-folder
 18. In MITK-GEM, mask T2 map image with cartilage mask and save to mask folder
 19. Use Paraview to visualize masked t2 map on top of gray scale image.
+
+## Default directory structure
+participant
+  |--config
+  |--dicom
+  |--mask
+  |--norm
+  |--raw
+  |--register
+  |--t2maps
