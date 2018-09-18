@@ -1,7 +1,7 @@
-# Author: Yves Pauchard
-# Date: Aug 24, 2018
 # Converting all series in a DICOM folder to sitk images
-
+#
+# Copyright (C) 2018 Yves Pauchard
+# License: BSD 3-clause (see LICENSE)
 
 # imageseriesreader is not yet supporting reading metadata from DICOM
 # see https://github.com/SimpleITK/SimpleITK/issues/331
@@ -72,9 +72,6 @@ tags_to_print = ['PatientID',
                  'RepetitionTime',
                  'EchoTime']
 
-# dicom_path = '/Users/pauc/Documents/Research/myProjects/t2mapping/data/pacs/MOJO_0054^^^^MaierTest/IMAGES'
-# output_dir = '/Users/pauc/Documents/Research/myProjects/t2mapping/data/test/'
-# image_extension = '.mha'
 
 # Argument parser
 a_parser = argparse.ArgumentParser(

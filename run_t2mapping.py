@@ -1,6 +1,7 @@
-# Author: Yves Pauchard
-# Date: Aug 24, 2018
 # Will call the ITK t2mapping executable
+#
+# Copyright (C) 2018 Yves Pauchard
+# License: BSD 3-clause (see LICENSE)
 
 import os
 import subprocess

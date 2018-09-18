@@ -1,8 +1,8 @@
-# Author: Yves Pauchard
-# Date: Aug 24, 2018
 # Pre-processing image(s) by normalization to noise level.
 # Intended for subsequent T2 mapping
-
+#
+# Copyright (C) 2018 Yves Pauchard
+# License: BSD 3-clause (see LICENSE)
 
 import SimpleITK as sitk
 import os
