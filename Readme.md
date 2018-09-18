@@ -29,7 +29,7 @@ source activate sitkpy
 ```
 6. Run metaimage extraction
 ```python
-python ../../code/t2mapping_scripts/dicom_series_to_sitk.py dicom/IMAGES raw/
+python <path>/t2mapping_python/dicom_series_to_sitk.py dicom/IMAGES raw/
 ```
 7. Open MITK-GEM, load image with lowest TE from raw folder, draw a rough mask and save in sub-folder mask
 8. Prepare image_list.csv with all image names, and TE values, save in config folder
@@ -37,17 +37,17 @@ python ../../code/t2mapping_scripts/dicom_series_to_sitk.py dicom/IMAGES raw/
 10. Edit register.ini
 11. Run registration
 ```python
-python ../../code/t2mapping_scripts/register_images.py config/register.ini
+python <path>/t2mapping_python/register_images.py config/register.ini
 ```
 12. Edit normalize.ini
 13. Run normalization
 ```python
-python ../../code/t2mapping_scripts/normalize_images.py config/normalize.ini
+python <path>/t2mapping_python/normalize_images.py config/normalize.ini
 ```
 14. Edit t2map.ini
 15. Run t2mapping
 ```python
-python ../../code/t2mapping_scripts/run_t2mapping.py config/t2map.ini
+python <path>/t2mapping_python/run_t2mapping.py config/t2map.ini
 ```
 16. In MITK-GEM, create a mask of the cartilage for T2 mapping analysis, save to mask folder
 17. In MITK-GEM, measure mean T2 value in cartilage mask, record in results csv in results sub-folder

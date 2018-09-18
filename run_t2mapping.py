@@ -10,8 +10,11 @@ import configparser
 import argparse
 import csv
 
-# path to t2mapping executable
-exec_path= "/Users/pauc/Documents/Research/code/t2mapping/build/t2mapping"
+# path to t2mapping executable expected in ./bin/t2mapping
+current_script_path = os.path.realpath(__file__)
+current_script_dir = os.path.dirname(current_script_path)
+exec_path = os.path.join(current_script_dir, 'bin', 't2mapping')
+
 
 # Create and configure logger
 LOG_FORMAT = "%(levelname)s %(asctime)s - %(message)s" # see https://docs.python.org/2/library/logging.html#logrecord-attributes
