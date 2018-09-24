@@ -109,13 +109,13 @@ def register_two_images(fixed_image, moving_image, fixed_mask_image=None, rigid=
     #                                          convergenceMinimumValue = 1e-5,
     #                                          convergenceWindowSize = 5)
 
-    #R.SetOptimizerAsRegularStepGradientDescent(learningRate=2.0,
-    #                                           minStep = 1e-4,
-    #                                           numberOfIterations = 500,
-    #                                           gradientMagnitudeTolerance = 1e-8 )
+    R.SetOptimizerAsRegularStepGradientDescent(learningRate=2.0,
+                                               minStep = 1e-4,
+                                               numberOfIterations = 500,
+                                               gradientMagnitudeTolerance = 1e-8 )
 
-    R.SetOptimizerAsGradientDescent(learningRate=10.0, numberOfIterations=100,
-                                    convergenceMinimumValue=1e-6, convergenceWindowSize=10)
+    #R.SetOptimizerAsGradientDescent(learningRate=10.0, numberOfIterations=100,
+    #                                convergenceMinimumValue=1e-6, convergenceWindowSize=10)
 
     # *** Transform
     if rigid: # use 3D Euler transform (default)
@@ -144,7 +144,7 @@ def register_two_images(fixed_image, moving_image, fixed_mask_image=None, rigid=
     logger.info('Final metric value: {0}'.format(R.GetMetricValue()))
 
     #TODO: Expose interpolation method.
-    moving_resampled = sitk.Resample(moving_image, fixed_image, final_transform, sitk.sitkLinear, 0.0, moving_image.GetPixelID())
+    moving_resampled = sitk.Resample(moving_image, fixed_image, final_transform, sitk.sitkBSpline, 0.0, moving_image.GetPixelID())
     return moving_resampled, final_transform
 
 
